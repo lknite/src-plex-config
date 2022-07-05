@@ -8,7 +8,7 @@ Normally this script is not called directly, but via a customized plex image or 
 
 ## How it works
 
-See ./scripts for available settings which can be configured, note the folder names.
+See ./settings for available settings which can be configured, note the folder names.
 
 To configure a setting specify the folder name as an environment variable prepended with 'PLEX_CONFIG-', for example:
 
