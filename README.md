@@ -33,4 +33,7 @@ Configuring unique_remove_pause_arrow_overlay ... success, done
 ## Contributing
 
 - scripts must be idempotent
-- scripts must verify the change was made successfully and return an appropriate errorcode of success(0), failed(1), or unknown(2)
+- scripts must verify the change was made successfully and return an appropriate errorcode:
+  - 0 = success
+  - 1 = failed
+  - 2 = feature not supported
