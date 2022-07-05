@@ -3,6 +3,7 @@
 # load up environment variables with values to set
 SETTINGS=`printenv | grep PLEX_CONFIG`
 
+# loop through settings performing requested configuration on each
 for SETTING in $SETTINGS
 do
   ##
@@ -29,6 +30,7 @@ do
   # display & execute
 
   # call the script which knows how to set this value
-  echo "Configuring $SCRIPT ..."
+  echo -n "Configuring $SCRIPT ..."
   $SCRIPTPATH "${!NEXT}"
+  echo " done"
 done
