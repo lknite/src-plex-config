@@ -29,8 +29,20 @@ do
   ##
   # display & execute
 
-  # call the script which knows how to set this value
+  # display next action
   echo -n "Configuring $SCRIPT ..."
+
+  # call the script which knows how to set this value
   $SCRIPTPATH "${!NEXT}"
-  echo " done"
+
+  # display result of the script
+  if [ $? -eq 0 ]; then
+    echo -n " success"
+  elif [ $? -eq 1 ]; then
+    echo -n " failed"
+  else 
+    echo -n " unknown"
+  fi
+  echo ", done"
+
 done

@@ -25,7 +25,12 @@ PLEX_CONFIG_UNIQUE_REMOVE_PAUSE_ARROW_OVERLAY=true
 
 output
 ```
-Configuring transcoder_default_throttle_buffer ... done
-Configuring network_enable_relay ... done
-Configuring unique_remove_pause_arrow_overlay ... done
+Configuring transcoder_default_throttle_buffer ... success, done
+Configuring network_enable_relay ... success, done
+Configuring unique_remove_pause_arrow_overlay ... success, done
 ```
+
+## Contributing
+
+- scripts must be idempotent
+- scripts must verify the change was made successfully and return an appropriate errorcode of success(0), failed(1), or unknown(2)
