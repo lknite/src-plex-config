@@ -10,7 +10,7 @@ Normally this script is not called directly, but via a customized plex image or 
 
 See ./settings for available settings which can be configured, note the folder names.
 
-To configure a setting specify the folder name as an environment variable prepended with 'PLEX_CONFIG-', for example:
+To configure a setting specify the folder name as an environment variable prepended with 'PLEX_CONFIG_' and with all underscores '_', for example:
 
 export PLEX_CONFIG-NETWORK-ENABLE_RELAY=false
 
