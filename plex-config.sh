@@ -1,5 +1,25 @@
 #!/bin/bash
 
+##
+# Initial delay if user is not logged in yet
+
+# wait here, if needed, until login has occured
+MISSING=false
+USERNAME=`xmlstarlet sel --net -t -v "//*[@AcceptedEULA=\"1\"]/@PlexOnlineUsername" -n`
+while [ "$USERNAME" != "" ]; do
+  MISSING=true
+  sleep 1
+done
+
+# if we had to wait, then wait a few more seconds just to make sure everything is in place
+if [ "MISSING" == "true" ]; then
+  sleep 5
+fi
+
+
+##
+# Set configuration items
+
 # load up environment variables with values to set
 SETTINGS=`printenv | grep PLEX_CONFIG`
 
