@@ -12,7 +12,7 @@ See ./settings for available settings which can be configured, note the folder n
 
 To configure a setting specify the folder name as an environment variable prepended with 'PLEX_CONFIG_' and with all underscores '_', for example:
 
-export PLEX_CONFIG-NETWORK-ENABLE_RELAY=false
+export PLEX_CONFIG_NETWORK_ENABLE_RELAY=false
 
 Then execute the script:
 ./plex-config.sh
