@@ -4,7 +4,7 @@ A method to configure plex options which would otherwise require gui interaction
 
 ## Execution
 
-Normally this script is not called directly, but via a customized plex image or helm chart.
+Normally this script is not called directly, but rather during deployment via a customized plex image or helm chart.
 
 ## How it works
 
