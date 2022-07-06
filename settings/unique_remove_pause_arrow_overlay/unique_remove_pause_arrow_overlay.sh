@@ -14,7 +14,7 @@ do
   if [ "$last" != "$i" ]; then
     #echo "$i"
 
-    sed -i 's/'"$i"'border:2px solid hsla(0,0%,100%,.7);border-radius:50%;color:hsla(0,0%,100%,.7);display:inline-block/'"$i"'border:2px solid hsla(0,0%,100%,.7);border-radius:50%;color:hsla(0,0%,100%,.7);display:none/g' $maincss
+    sed -i 's/\('"$i"'[^}]*;\)display:inline-block/\1display:none/g' $maincss
 
     # track last tested to avoid repeating a search
     last=$i
