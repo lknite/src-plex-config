@@ -17,8 +17,8 @@ last=""
 for i in $POSSIBLE
 do
   if [ "$last" != "$i" ]; then
-    #echo "$i"
 
+    # replace the 'display:inline-block' with 'display:none'
     sed -i 's/\('"$i"'[^}]*\)display:inline-block/\1display:none/g' $maincss
 
     # track last tested to avoid repeating a search
