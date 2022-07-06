@@ -1,5 +1,10 @@
 #!/bin/bash
 #
+# 1. Looks in the css a string starting with 'PlayButton-playCircl-<6 characters>{'
+# 2. Then, any number of any characters except for '}'
+# 3. If 'display:inline-block' is found before '}' stops the search, we have a match
+# 4. Replace the 'display:inline-block' with 'display:none', using '\1' to replace the matched string
+
 
 # locate css to update
 maincss=`find /usr/lib/plexmediaserver/Resources/ -name "main*.css" | grep WebClient`
